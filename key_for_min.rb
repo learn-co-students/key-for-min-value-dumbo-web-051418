@@ -7,10 +7,12 @@ def key_for_min_value(name_hash)
   name_hash.each do |name, value|
     if prev_value == 0
       prev_value = value
-      arr
+      key_arr << name
     else
       if prev_value > value 
-        key_arr.unshift(key)
+        key_arr.unshift(name)
+      else
+        key_arr << name
       end 
     end
   end
